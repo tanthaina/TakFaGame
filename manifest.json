@@ -1,0 +1,15 @@
+{
+  "name": "Badminton Tournament V22",
+  "short_name": "แบดกีฬาสี",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f0f4f8",
+  "theme_color": "#1e293b",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3069/3069172.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
