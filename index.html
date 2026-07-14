@@ -2,7 +2,15 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- ✅ PWA & Tablet App Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="แบดกีฬาสี">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#1e293b">
+    
     <title>ระบบจัดคู่แบดมินตัน V22 (ฉบับสมบูรณ์: คุมสนาม & บอร์ดคะแนน Live)</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
@@ -125,6 +133,23 @@
         .edit-modal-box th { background: #f1f5f9; font-weight: bold; }
         .edit-modal-input { width: 65px; text-align: center; padding: 8px; border: 2px solid #cbd5e1; border-radius: 6px; font-size: 18px; font-weight: bold; }
         .edit-modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 10px; }
+
+        /* ✅ Responsive for Tablets & Mobile */
+        @media (max-width: 1100px) {
+            .live-container { flex-direction: column; }
+            .checkin-panel, .queue-panel { width: 100%; }
+        }
+        @media (max-width: 900px) {
+            .grid-teams, .grid-pairs { grid-template-columns: 1fr; }
+            .courts-container { grid-template-columns: repeat(3, 1fr); }
+            .tabs-header { flex-direction: column; }
+            .tab-btn { width: 100%; }
+        }
+        @media (max-width: 600px) {
+            .courts-container { grid-template-columns: repeat(2, 1fr); }
+            .leaderboard { flex-direction: column; gap: 10px; }
+            .score-box { width: 100%; }
+        }
     </style>
 </head>
 <body>
